@@ -1,0 +1,85 @@
+.footer{
+    width: 100%;
+    background-color: var(--azulPrincipal);
+    padding: 20px 0;  
+    color: var(--blanco);
+    font-size: 14px; 
+}
+
+.fila{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--blanco);
+    padding-bottom: 10px;
+    gap: 20px;
+}
+
+@media (max-width: 640px) { 
+    .fila{
+        flex-direction: column;
+    }
+}
+
+.logo{
+    position: relative;
+    width: 265px;
+    height: 65px;
+}
+
+.contacto{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+    gap: 10px;
+}
+
+@media (max-width: 640px) { 
+    .contacto{
+        align-items: center;
+    }
+}
+
+.redes{
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.redes li a{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid var(--blanco);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.redes li a i{
+    color: var(--blanco);
+    font-size: 14px;
+}
+
+.numeros{
+    display: flex;
+}
+
+.copyright{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+@media (max-width: 640px) { 
+    .copyright{
+        flex-direction: column;
+    }
+}
+
+.copyright a{
+    color: var(--blanco);
+}

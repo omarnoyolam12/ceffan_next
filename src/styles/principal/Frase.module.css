@@ -1,0 +1,62 @@
+.seccion{
+    margin-top: var(--separacion);
+    width: 100%;
+    height: 500px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+@media (max-width: 640px) {  
+    .seccion{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.cita{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--azulPrincipal);
+    color: var(--blanco);
+}
+
+.cita i{
+    font-size: 102px;
+    opacity: .2;
+}
+
+.frase{
+    font-size: 42px;
+    text-align: center;
+    width: 60%;
+    margin-bottom: 40px;
+    font-weight: 300;
+}
+
+@media (max-width: 1024px) {  
+    .frase{
+        font-size: 24px;
+    }
+}
+
+.autor{
+    font-weight: 300;
+    font-style: italic;
+    font-size: 20px;
+}
+
+.imagen{
+    width: 100%;
+    height: 100%;
+    background-image: url('/img/conocimiento.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@media (max-width: 640px) {  
+    .imagen{
+        display: none;
+    }
+}

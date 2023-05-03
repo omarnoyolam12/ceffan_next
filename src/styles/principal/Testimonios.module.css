@@ -1,0 +1,45 @@
+.seccion{
+    background-color: var(--blanco);
+    padding: var(--separacion) 0;
+    position: relative;
+}
+
+.grid{
+    margin-top: var(--separacion);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 100px;
+    min-height: 500px;
+}
+
+@media (max-width: 1280px) { 
+    .grid{
+        gap: 40px;
+    }
+}
+
+@media (max-width: 1024px) { 
+    .grid{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.fondo{
+    background-image: linear-gradient(to top, #accbee54 0%, #e7f0fd3d 100%), url('/img/testimonios.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 30px;
+}
+
+@media (max-width: 1280px) {    
+    .fondo{
+        height: 400px;
+    }
+}
+
+.introduccion p{
+    font-size: 36px;
+    color: var(--enlaces);
+    color: var(--azulSecundario);
+}
