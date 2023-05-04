@@ -64,6 +64,7 @@ const Hero = () => {
                     <Image
                         src={header}
                         fill
+                        priority
                         alt="Header"
                     />
                 </figure>
