@@ -37,6 +37,12 @@
     text-transform: uppercase;
 }
 
+@media (max-width: 1280px) {
+    .titulo{
+        font-size: 42px;
+    }
+}
+
 @media (max-width: 1024px) {
     .titulo{
         width: 80%;
@@ -45,7 +51,12 @@
 
 @media (max-width: 680px) {
     .titulo{
-        font-size: 42px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 680px) {
+    .titulo{
         width: 100%;
     }
 }
@@ -56,17 +67,21 @@
     width: 40%;
 }
 
+@media (max-width: 1280px) {
+    .frase{
+        font-size: 18px;
+    }
+}
+
 @media (max-width: 1024px) {
     .frase{
         width: 60%;
-        font-size: 20px;
     }
 }
 
 @media (max-width: 680px) {
     .frase{
         width: 80%;
-        font-size: 20px;
     }
 }
 
@@ -93,7 +108,7 @@
 
 @media (max-width: 1280px) {
     .imagen{
-        top: 100px;
+        top: 10%;
     }
 }
 
@@ -111,8 +126,8 @@
 
 @media (max-width: 1280px) {
     .imagen figure{
-        width: 450px;
-        height: 560px;
+        width: 400px;
+        height: 500px;
     }
 }
 
