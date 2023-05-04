@@ -7,6 +7,18 @@
     position: relative;
 }
 
+@media (max-width: 768px) { 
+    .header{
+        height: calc(100vh - 150px);
+    }
+}
+
+@media (max-height: 450px) { 
+    .header{
+        min-height: 100vh;
+    }
+}
+
 .relative{
     position: relative;
     width: 100%;
@@ -15,12 +27,13 @@
 }
 
 .texto{
-    height: 100%;
+    min-height: 100%;
     display: flex;
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
     position: relative;
+    padding: 30px 0;
     z-index: 20;
 }
 
@@ -108,7 +121,7 @@
 
 @media (max-width: 1280px) {
     .imagen{
-        top: 10%;
+        top: 5%;
     }
 }
 
@@ -135,6 +148,13 @@
     .imagen figure{
         width: 500px;
         height: 580px;
+    }
+}
+
+@media (max-height: 650px) {
+    .imagen figure{
+        width: 400px;
+        height: 450px;
     }
 }
 
