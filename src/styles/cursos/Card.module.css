@@ -1,0 +1,80 @@
+.card{
+    margin-bottom: 40px;
+    transition: all .3s ease-in-out;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 1px solid var(--borde);
+}
+
+.card:hover{
+    box-shadow: var(--sombra);
+}
+
+.card:hover figure img{
+    transform: scale(1.2);
+}
+
+.card:hover figure::after{
+    opacity: 1;
+}
+
+.card:hover .titulo{
+    color: var(--azulSecundario);
+}
+
+.card figure{
+    position: relative;
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+}
+
+.card figure::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #00000036;
+    transition: all .3s ease-in-out;
+    opacity: 0;
+}
+
+.card figure img{
+    object-fit: cover;
+    object-position: center;
+    transition: all .3s ease-in-out;
+}
+
+.info{
+    padding: 10px 10px 30px 10px;
+}
+
+.tag{
+    font-size: 14px;
+    padding: 5px 10px;
+    font-style: italic;
+    color: var(--azulSecundario);
+}
+
+.titulo{
+    margin: 10px 0 20px 0;
+    transition: all .3s ease-in-out;
+    color: var(--texto);
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.titulo:hover{
+    text-decoration: underline solid 2px;
+}
+
+.descripcion{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    font-size: 14px;
+    color: var(--textoAlternativo);
+}
