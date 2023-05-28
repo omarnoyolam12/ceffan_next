@@ -4,8 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import logo from "../../../../public/img/logo.svg";
-
-import style from "../../../styles/principal/Navegacion.module.css";
+import sass from "../../../styles/sass/navegacion/barraNav.module.scss";
 
 interface Enlaces {
     pagina: string,
@@ -42,9 +41,9 @@ const Navegacion = () => {
     }
 
     return (
-        <nav className={style.navegador}>
-            <div className={`margen ${style.contenido}`}>
-                <figure className={style.logo}>
+        <nav className={sass.barra}>
+            <div className={`contenedor ${sass.contenedor}`}>
+                <figure className={sass.logo}>
                     <Image 
                         src={logo}
                         alt="Logo Ceffan"
@@ -53,12 +52,12 @@ const Navegacion = () => {
                     />
                 </figure>
 
-                <ul className={`${style.enlaces} ${menuAbierto ? '' : style.esconder}`}>
+                <ul className={`${sass.enlaces} ${menuAbierto ? '' : sass.esconder}`}>
                     {enlaces.map(enlace=>(
                         <li key={enlace.pagina}>
                             <Link 
                                 href={enlace.url}
-                                className={router.pathname === enlace.url ? style.activa : style.desactiva}
+                                className={router.pathname === enlace.url ? sass.activa : sass.desactiva}
                             >
                                 {enlace.pagina}
                             </Link>
@@ -67,13 +66,13 @@ const Navegacion = () => {
                 </ul>
                 
                 <div 
-                    className={`${style.overlay} ${menuAbierto ? style.ver : ''}`}
+                    className={`${sass.overlay} ${menuAbierto ? sass.ver : ''}`}
                     onClick={toogleMenu}
                 >
                 </div>
 
                 <i 
-                    className={`bx bx-menu ${style.menu}`}
+                    className={`bx bx-menu ${sass.menu}`}
                     onClick={toogleMenu}
                 ></i>
 

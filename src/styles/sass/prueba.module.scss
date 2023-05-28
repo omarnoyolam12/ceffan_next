@@ -1,0 +1,12 @@
+@import 'base/variables';
+
+.navegacion {
+    background: $bg-principal;
+}
+
+.contenido{
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

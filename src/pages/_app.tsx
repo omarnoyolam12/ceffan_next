@@ -1,5 +1,5 @@
 import '@/styles/normalize.css'
-import '@/styles/globals.css'
+import '@/styles/sass/globales.scss'
 
 import type { AppProps } from 'next/app'
 

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import style from "../../../styles/principal/GridCursos.module.css";
+import sass from "../../../styles/sass/principal/Cursos.module.scss";
 
 import contabilidad from "../../../../public/img/contabilidad.svg";
 import auditoria from "../../../../public/img/auditoria.svg";
@@ -8,8 +8,8 @@ import recursos from "../../../../public/img/recursos.svg";
 
 const GridCursos = () => {
     return (
-        <div className={style.grid}>
-            <div className={style.contabilidad}>
+        <div className={sass.grid}>
+            <div className={sass.tarjeta}>
                 <figure>
                     <Image
                         src={contabilidad}
@@ -18,12 +18,12 @@ const GridCursos = () => {
                     />
                 </figure>
 
-                <div className={style.categoria}>
+                <div className={sass.categoria}>
                     <p>Contabilidad</p>
                 </div>
             </div>
 
-            <div className={style.auditoria}>
+            <div className={sass.tarjeta}>
                 <figure>
                     <Image
                         src={auditoria}
@@ -32,12 +32,12 @@ const GridCursos = () => {
                     />
                 </figure>
 
-                <div className={style.categoria}>
+                <div className={sass.categoria}>
                     <p>Auditoría</p>
                 </div>
             </div>
 
-            <div className={style.suministros}>
+            <div className={sass.tarjeta}>
                 <figure>
                     <Image
                         src={suministros}
@@ -46,12 +46,12 @@ const GridCursos = () => {
                     />
                 </figure>
 
-                <div className={style.categoria}>
+                <div className={sass.categoria}>
                     <p>Cadena de suministros</p>
                 </div>
             </div>
 
-            <div className={style.recursos}>
+            <div className={sass.tarjeta}>
                 <figure>
                     <Image
                         src={recursos}
@@ -60,7 +60,7 @@ const GridCursos = () => {
                     />
                 </figure>
 
-                <div className={style.categoria}>
+                <div className={sass.categoria}>
                     <p>Recursos humanos</p>
                 </div>
             </div>

@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import style from "../../../styles/principal/Soluciones.module.css";
+import sass from "../../../styles/sass/principal/Soluciones.module.scss";
 
 interface Solucion {
     solucion: Datos
@@ -16,14 +16,21 @@ const ListaSoluciones: FC<Solucion> = ({solucion}) => {
     const { info, titulo, icono } = solucion;
 
     return (
-        <div className={style.tarjeta}>
-            <i className={icono}></i>
-            <p className={style.titulo}>
-                {titulo}
-            </p>
-            <p className={style.info}>
-                {info}
-            </p>
+        <div className={sass.tarjeta}>
+            <div>
+                <div className={sass.icono}>
+                    <i className={icono}></i>
+                </div>
+            </div>
+            
+            <div className={sass.contenido}>
+                <p className={sass.titulo}>
+                    {titulo}
+                </p>
+                <p className={sass.info}>
+                    {info}
+                </p>
+            </div>
         </div>
     )
 }

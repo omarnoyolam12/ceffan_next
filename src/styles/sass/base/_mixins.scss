@@ -1,0 +1,156 @@
+@import 'variables';
+
+// *Medias Querys--------------------------------------------------
+@mixin telefono {
+    @media (max-width: $telefono) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: $tablet) {
+        @content;
+    }
+}
+
+@mixin escritorio {
+    @media (max-width: $escritorio) {
+        @content;
+    }
+}
+
+@mixin escritorioXl {
+    @media (max-width: $escritorio-xl) {
+        @content;
+    }
+}
+
+@mixin escritorio2xl {
+    @media (max-width: $escritorio-2xl) {
+        @content;
+    }
+}
+
+@mixin horizontal {
+    @media (max-height: $horizontal) {
+        @content;
+    }
+}
+
+// *Secciones-----------------------------------------------------
+@mixin seccion($margin, $padding, $width: auto, $height: auto, $posicion: static){
+    margin: $margin;
+    padding: $padding;
+    position: $posicion;
+    width: $width;
+    height: $height;
+}
+
+@mixin caja($width, $height, $margin, $padding){
+    width: $width;
+    height: $height;
+    margin: $margin;
+    padding: $padding;
+}
+
+@mixin separacion {
+    margin: 8rem auto;
+}
+
+// *Grids---------------------------------------------------------
+@mixin grid($columnas, $espaciado) {
+    display: grid;
+    grid-template-columns: repeat($columnas, 1fr);
+    gap: $espaciado;
+}
+
+@mixin flex($justify, $items, $gap, $direction) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $items;
+    gap: $gap;
+    flex-direction: $direction;
+}
+
+// *Imagenes------------------------------------------------------
+@mixin imagen($radius: false, $borderRadius: 0) {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+
+    @if($radius == true){
+        border-radius: $borderRadius;
+    }
+}
+
+@mixin imagenSize($width, $height, $object: false) {
+    position: relative;
+    width: $width;
+    height: $height;
+
+    img {
+        width: 100%;
+        height: 100%;
+        
+        @if($object == true) {
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+}
+
+// *Posición absoluta---------------------------------------------
+@mixin absoluta($direccion1, $direccion2, $posicion1, $posicion2) {
+    position: absolute;
+
+    @if($direccion1 == arriba){
+        top: $posicion1;
+    }
+
+    @if($direccion1 == abajo){
+        bottom: $posicion1;
+    }
+
+    @if($direccion2 == izquierda){
+        left: $posicion2;
+    }
+
+    @if($direccion2 == derecha){
+        right: $posicion2;
+    }
+}
+
+// *Titulos-------------------------------------------------------
+@mixin frase {
+    font-size: $heading-md;
+    color: $gris70;
+
+    span {
+        color: $texto-secundario;
+    }
+
+    @include escritorio {
+        font-size: $heading-sm;
+    }
+}
+
+@mixin frase2($color) {
+    font-size: $heading-md;
+    color: $color;
+
+    @include escritorio {
+        font-size: $heading-sm;
+    }
+}
+
+// *Boton link-----------------------------------------------------
+@mixin botonMas {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-image: $degradado1;
+    border-radius: 1rem;
+    color: $texto-gris100;
+}

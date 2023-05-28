@@ -1,0 +1,108 @@
+@import '../base/mixins';
+
+// *Base de la sección---------------------------------------------------
+.header {
+    @include seccion(0 0 10rem 0, 0, 100%, calc(100vh - 25rem), relative);
+    background: $bg-principal;
+
+    @include tablet {
+        margin-bottom: 0;
+        height: calc(100vh - 15rem);
+    }
+}
+
+// *Contenedor de la imagen absoluta-------------------------------------
+.relative {
+    @include seccion(0, 0, 100%, 100%, relative);
+    overflow: hidden;
+}
+
+// *Imagen---------------------------------------------------------------
+.imagen {
+    @include absoluta(arriba, derecha, 0, 0);
+
+    @include escritorioXl {
+        @include absoluta(arriba, derecha, 5%, 0);
+    }
+
+    @include escritorio {
+        display: none;
+    }
+
+    figure{
+        @include imagenSize (65rem, 78rem, true);
+
+        @include escritorio2xl {
+            @include imagenSize (60rem, 70rem, true);
+        }
+
+        @include escritorioXl {
+            @include imagenSize (50rem, 58rem, true);
+        }
+
+        @include horizontal {
+            @include imagenSize (40rem, 45rem, true);
+        }
+    }
+}
+
+// *Contenedor del texto de inicio--------------------------------------
+.texto {
+    @include flex(center, flex-start, 0, column);
+    min-height: 100%;
+    padding: 3rem 0;
+    position: relative;
+    z-index: 20;
+    color: $texto-blanco;
+
+    .aprender {
+        font-size: $heading-sm;
+        font-weight: 300;
+    }
+
+    .titulo {
+        font-size: $heading-2xl;
+        font-weight: 400;
+        width: 50%;
+        margin-bottom: 2rem;
+        text-transform: uppercase;
+
+        @include escritorioXl {
+            font-size: $heading-xl;
+        }
+
+        @include escritorio {
+            width: 80%;
+        }
+
+        @include tablet {
+            width: 100%;
+        }
+    }
+
+    .frase {
+        font-size: $parrafo-xl;
+        font-weight: 300;
+        width: 40%;
+
+        @include escritorioXl {
+            width: 50%;
+        }
+
+        @include escritorio {
+            width: 80%;
+        }
+    }
+
+    .link {
+        @include flex(center, center, 2rem, row);
+        margin-top: 2rem;
+        padding: 1rem 2rem;
+        color: $texto-blanco;
+        border: 1px solid $blanco;
+
+        i {
+            transform: rotate(180deg);
+        }
+    }
+}

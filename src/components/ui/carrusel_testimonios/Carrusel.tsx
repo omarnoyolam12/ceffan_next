@@ -1,7 +1,7 @@
 import { FC, useState, useEffect } from "react";
 import Image from "next/image";
 
-import style from "../../../styles/principal/Carrusel.module.css";
+import sass from "../../../styles/sass/principal/Testimonios.module.scss";
 import { Testimonio } from "@/interfaces";
 
 interface Props {
@@ -45,9 +45,9 @@ const Carrusel: FC<Props> = ({testimonios}) => {
 
     return (
         <>
-            <div className={style.carrusel}>
-                <div className={style.encabezado}>
-                    <figure>
+            <div className={sass.carrusel}>
+                <div className={sass.encabezado}>
+                    <figure className={sass.foto}>
                         <Image
                             src={verTestimonio!.imagen}
                             fill
@@ -56,17 +56,17 @@ const Carrusel: FC<Props> = ({testimonios}) => {
                     </figure>
 
                     <div>
-                        <p className={style.nombre}>{verTestimonio?.nombre}</p>
-                        <p className={style.puesto}>{verTestimonio?.puesto}</p>
+                        <p className={sass.nombre}>{verTestimonio?.nombre}</p>
+                        <p className={sass.puesto}>{verTestimonio?.puesto}</p>
                     </div>
                 </div>
 
-                <p className={style.texto}>
+                <p className={sass.texto}>
                     {verTestimonio?.texto}
                 </p>
             </div>
 
-            <div className={style.botones}>
+            <div className={sass.botones}>
                 <button
                     onClick={atras}
                 >

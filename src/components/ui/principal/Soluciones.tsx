@@ -1,6 +1,5 @@
-import style from "../../../styles/principal/Soluciones.module.css";
-
 import { ListaSoluciones } from "./";
+import sass from "../../../styles/sass/principal/Soluciones.module.scss";
 
 const solucionesInfo = [
     {
@@ -29,14 +28,14 @@ const solucionesInfo = [
 const Soluciones = () => {
     
     return (
-        <section className={`margen ${style.seccion}`}>
-            <div className={style.subtitulo}>
-                <h2>Soluciones</h2>
-                <p className={style.encabezado}>Nos esforzamos por comprender a fondo tus necesidades y prioridades</p>
-                <p className={style.frase}>Comprendemos que cada cliente tiene necesidades y objetivos únicos. Es por eso que hemos desarrollado una amplia gama de soluciones diseñadas específicamente para abordar tus desafíos y ayudarte a alcanzar el éxito.</p>
+        <section className={`contenedor ${sass.seccion}`}>
+            <div className={sass.descripcion}>
+                <h2 className="nombre-seccion">Soluciones</h2>
+                <p className={sass.encabezado}>Nos esforzamos por comprender a fondo tus necesidades y prioridades</p>
+                <p className={sass.frase}>Comprendemos que cada cliente tiene necesidades y objetivos únicos. Es por eso que hemos desarrollado una amplia gama de soluciones diseñadas específicamente para abordar tus desafíos y ayudarte a alcanzar el éxito.</p>
             </div>
 
-            <div className={style.grid}>
+            <div className={sass.soluciones}>
                 {solucionesInfo.map(solucion=>(
                     <ListaSoluciones
                         key={solucion.titulo}

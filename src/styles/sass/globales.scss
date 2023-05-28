@@ -1,0 +1,48 @@
+@import 'base/mixins';
+
+// *Resetear Box Model---------------------------------------------
+*, ::after, ::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// *Configurar el font rem a 10px----------------------------------
+html {
+    font-size: 62.5%;
+}
+
+// *Letra principal y 16px para el tamaño del ren de la página-----
+body {
+    font-family: $fuentePrincipal;
+    font-size: 1.6rem;
+    color: $gris100;
+}
+
+// *Contenedor-----------------------------------------------------
+.contenedor {
+    width: 1400px;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+// *Listas---------------------------------------------------------
+li {
+    list-style: none;
+}
+
+// *Enlaces--------------------------------------------------------
+a {
+    text-decoration: none;
+}
+
+// *Nombre de la seccion-------------------------------------------
+.nombre-seccion {
+    color: $acero90;
+    font-size: $heading-sm;
+    font-weight: 400;
+
+    @include escritorio {
+        font-size: $heading-xs;
+    }
+}

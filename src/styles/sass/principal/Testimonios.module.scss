@@ -1,0 +1,89 @@
+@import '../base/mixins';
+
+// *Separación y grid de la sección-------------------------------------
+.fondo {
+    @include seccion(8rem 0, 6rem 0);
+
+    background: $bg-gris60;
+
+    .grid {
+        @include grid(2, 10rem);
+        min-height: 50rem;
+
+        @include escritorio {
+            @include grid(1, 5rem);
+        }
+    }
+}
+
+// *Imagen---------------------------------------------------------------
+.imagen {
+    background-image: linear-gradient(to top, #accbee54 0%, #e7f0fd3d 100%), url('/img/testimonios.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 30px;
+
+    @include escritorio {
+        height: 30rem;
+    }
+}
+
+// *Titulo--------------------------------------------------------------
+.frase {
+    @include frase2($texto-secundario);
+}
+
+// *Carrusel------------------------------------------------------------
+.carrusel {
+    padding-top: 4rem;
+
+    .encabezado {
+        @include flex(flex-start, center, 2rem, row);
+        margin-bottom: 2rem;
+
+        .foto {
+            @include imagenSize(8rem, 8rem, true);
+            overflow: hidden;
+    
+            img {
+                border-radius: 50%;
+            }
+        }
+
+        .nombre {
+            font-weight: 700;
+            font-size: $heading-sm;
+        }
+
+        .puesto {
+            color: $texto-gris80;
+        }
+    }
+
+    .texto{
+        min-height: 150px;
+        line-height: $line-height-2;
+    }
+}
+
+// *Botones carrusel-------------------------------------------------------
+.botones {
+
+    @include telefono {
+        margin-top: 4rem;
+    }
+    
+    button {
+        background: none;
+        border: none;
+        cursor: pointer;
+        margin-right: 1rem;
+
+        i {
+            font-size: $icono5;
+            color: $texto-acero100;
+        }
+    }
+}
+

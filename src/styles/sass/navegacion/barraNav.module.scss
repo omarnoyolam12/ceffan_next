@@ -1,0 +1,90 @@
+@import '../base/mixins';
+
+// *Barra de navegación----------------------------------------------
+.barra {
+    background: $bg-principal;
+}
+
+.contenedor {
+    padding: 20px 0;
+    @include flex(space-between, center, 0, row)
+}
+
+// *Logo-------------------------------------------------------------
+.logo {
+    @include imagenSize(200px, 60px);
+
+    @include escritorio {
+        @include imagenSize(150px, 50px);
+    }
+}
+
+// *Enlaces---------------------------------------------------------
+.enlaces {
+    @include flex(center, center, 2rem, row);
+    transition: all .3s ease-in-out;
+
+    @include escritorio {
+        width: 320px;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        background: $bg-blanco;
+        flex-direction: column;
+        box-shadow: $sombra;
+
+        &.esconder {
+            transform: translateX(-320px);
+        }
+    }
+
+    li{
+        a{
+            color: $texto-gris70;
+
+            &.activa {
+                color: $texto-blanco;
+
+                @include escritorio {
+                    color: $texto-gris100;
+                }
+            }
+        }
+    }
+}
+
+// *Botón de menu---------------------------------------------------
+.menu {
+    display: none;
+
+    @include escritorio {
+        display: block;
+        font-size: $icono3;
+        color: $texto-blanco;
+        cursor: pointer;
+    }
+}
+
+// *Overlay del menu-----------------------------------------------
+.overlay{
+    display: none;
+    transition: all .3s ease-in-out;
+
+    @include escritorio {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        z-index: 99;
+        opacity: 0;
+        background: $negroT;
+
+        &.ver {
+            display: block;
+            opacity: 1;
+        }
+    }
+}

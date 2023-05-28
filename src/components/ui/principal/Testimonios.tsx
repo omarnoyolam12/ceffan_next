@@ -1,5 +1,5 @@
 import { Carrusel } from "../carrusel_testimonios";
-import style from "../../../styles/principal/Testimonios.module.css";
+import sass from "../../../styles/sass/principal/Testimonios.module.scss";
 import { Testimonio } from "@/interfaces";
 
 const testimonios: Testimonio[] = [
@@ -25,15 +25,15 @@ const testimonios: Testimonio[] = [
 
 const Testimonios = () => {
     return (
-        <section className={`margen`}>
-            <div className={style.grid}>
-                <figure className={style.fondo}></figure>
+        <section className={sass.fondo}>
+            <div className={`contenedor ${sass.grid}`}>
+                <figure className={sass.imagen}></figure>
 
                 <div>
                     
-                    <div className={style.introduccion}>
-                        <h2>Testimonios</h2>
-                        <p>Queremos compartir contigo las experiencias y opiniones de nuestros valiosos clientes.</p>
+                    <div className={sass.introduccion}>
+                        <h2 className="nombre-seccion">Testimonios</h2>
+                        <p className={sass.frase}>Queremos compartir contigo las experiencias y opiniones de nuestros valiosos clientes.</p>
                     </div>
 
                     <Carrusel

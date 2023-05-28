@@ -1,5 +1,5 @@
 import { LayoutPage } from "@/components/layouts";
-import { Hero, Nosotros, Soluciones, Cursos, Frase, PostRecientes, Testimonios } from "@/components/ui/principal";
+import { Hero, Nosotros, Soluciones, Cursos, PostRecientes, Testimonios } from "@/components/ui/principal";
 
 export default function Home() {
   return (
@@ -11,7 +11,6 @@ export default function Home() {
         <Hero/>
         <Nosotros/>
         <Soluciones/>
-        <Frase/>
         <Cursos/>
         <Testimonios/>
         <PostRecientes/>

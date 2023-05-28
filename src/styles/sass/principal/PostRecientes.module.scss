@@ -1,0 +1,37 @@
+@import '../base/mixins';
+
+// *Seccion----------------------------------------------------
+.seccion {
+    @include separacion;
+}
+
+// *Encabezado-------------------------------------------------
+.encabezado {
+    @include flex(space-between, center, 2rem, row);
+    margin-bottom: 4rem;
+
+    .texto {
+        flex: 1 1 0%;
+
+        .frase {
+            @include frase;
+        }
+    }
+
+    a {
+        @include botonMas;
+    }
+}
+
+// *Entradas blog-----------------------------------------------
+.grid {
+    @include grid (3, 2rem);
+
+    @include escritorio {
+        @include grid (2, 2rem);
+    }
+
+    @include telefono {
+        @include grid (1, 2rem);
+    }
+}

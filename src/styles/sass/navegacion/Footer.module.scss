@@ -1,0 +1,78 @@
+@import '../base/mixins';
+
+// *Footer------------------------------------------------------
+.footer {
+    @include caja(100%, auto, 8rem 0 0 0, 2rem 0);
+    background: $bg-principal;
+    color: $texto-blanco;
+
+    .fila {
+        @include flex(space-between, center, 2rem, row);
+        border-bottom: 1px solid $blanco;
+        padding-bottom: 1rem;
+        margin-bottom: 1rem;
+
+        @include telefono {
+            @include flex(center, center, 1rem, column);
+        }
+    }
+}
+
+// *Logo---------------------------------------------------------
+.logo {
+    @include imagenSize(200px, 60px);
+
+    @include escritorio {
+        @include imagenSize(150px, 50px);
+    }
+}
+
+// *Contacto------------------------------------------------------
+.contacto {
+    @include flex(center, flex-end, 1rem, column);
+    
+    @include telefono {
+        @include flex(center, center, 1rem, column);
+    }
+
+    .redes {
+        @include flex(center, flex-end, 1rem, row);
+
+        li {
+            a {
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                border: 1px solid $blanco;
+                @include flex(center, center, 0, row);
+
+                i {
+                    color: $texto-blanco;
+                    font-size: $parrafo-xs;
+                }
+            }
+        }
+    }
+
+    .numeros {
+        @include flex(flex-end, center, 0, row);
+        font-size: $parrafo-xs;
+
+        @include telefono {
+            @include flex(center, center, 0, row);
+        }
+    }
+}
+
+// *Copyright y aviso de privacidad----------------------------------
+.copyright {
+    @include flex(space-between, center, 2rem, row);
+    
+    @include telefono {
+        @include flex(center, center, 1rem, column);
+    }
+
+    a {
+        color: $texto-blanco;
+    }
+}

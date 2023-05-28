@@ -1,28 +1,106 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,300&display=swap');
 
-/* screens: {
-  'sm': '640px',
-  => @media (max-width: 640px) { ... }
-
-  'md': '768px',
-  => @media (max-width: 768px) { ... }
-
-  'lg': '1024px',
-  => @media (max-width: 1024px) { ... }
-
-  'xl': '1280px',
-  => @media (max-width: 1280px) { ... }
-
-  '2xl': '1536px',
-  => @media (max-width: 1536px) { ... } */
-
+/*---------------------- Variables ----------------------*/
 :root{
+  --fuentePrincipal: 'Roboto', sans-serif;
+  
+  --principal     : #09203F;
+  --secundario    : #00427D;
+  --blanco        : #fff;
+  --gris100       : #334155;
+  --gris90        : #454D54;
+  --gris80        : #7d7d7d;
+  --gris70        : #8FA0B0;
+  --acero100      : #537895;
+  --acero90       : #4C6578;
+  --degradado1    : linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+  --degradado2    : linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  --sombra        : 0px 0px 26px 0px rgba(0,0,0,0.2);
+
+  /*---------------- Tamaños de fuente ----------------*/
+  --heading-xl    : 52px;
+  --heading-md    : 42px;
+  --heading-sm    : 36px;
+  --heading-xs    : 24px;
+  --parrafo-xl    : 20px;
+  --parrafo-md    : 18px;
+  --parrafo-sm    : 16px;
+  --parrafo-xs    : 14px;
+
+  /*---------------------- Iconos ----------------------*/
+  --icono1        : 16px;
+  --icono2        : 18px;
+  --icono3        : 32px;
+  --icono4        : 42px;
+
+  /*----------------- Colores de Fondo -----------------*/
+  --bg-principal      : var(--principal);
+  --bg-secundario     : var(--secundario);
+  --bg-gris100        : var(--gris100);
+  --bg-gris90         : var(--gris90);
+  --bg-gris80         : var(--gris80);
+  --bg-gris70         : var(--gris70);
+  --bg-acero100       : var(--acero100);
+  --bg-acero90        : var(--acero90);
+  --bg-degradado1     : var(--degradado1);
+  --bg-degradado2     : var(--degradado2);
+
+  /*----------------- Colores de Texto -----------------*/
+  --texto-principal     : var(--principal);
+  --texto-secundario    : var(--secundario);
+  --texto-gris100       : var(--gris100);
+  --texto-gris90        : var(--gris90);
+  --texto-gris80        : var(--gris80);
+  --texto-gris70        : var(--gris70);
+  --texto-acero100      : var(--acero100);
+  --texto-acero90       : var(--acero90);
+  --texto-degradado1    : var(--degradado1);
+  --texto-degradado2    : var(--degradado2);
+
+  /*--------------------- Paddings ---------------------*/
+  --padding-5           : 5px;
+  --padding-10          : 10px;
+  --padding-20          : 20px;
+  --padding-30          : 30px;
+  --padding-40          : 40px;
+  --padding-50          : 50px;
+  --padding-60          : 60px;
+  --padding-x-10        : 10px 0px;
+  --padding-x-20        : 20px 0px;
+  --padding-x-30        : 30px 0px;
+  --padding-x-40        : 40px 0px;
+  --padding-x-50        : 50px 0px;
+  --padding-x-60        : 60px 0px;
+  --padding-10-20       : 10px 20px;
+
+  /*--------------------- Margins ---------------------*/
+  --margin-5           : 5px;
+  --margin-10          : 10px;
+  --margin-20          : 20px;
+  --margin-30          : 30px;
+  --margin-40          : 40px;
+  --margin-50          : 50px;
+  --margin-60          : 60px;
+  --margin-x-10        : 10px 0px;
+  --margin-x-20        : 20px 0px;
+  --margin-x-30        : 30px 0px;
+  --margin-x-40        : 40px 0px;
+  --margin-x-40        : 50px 0px;
+  --margin-x-40        : 60px 0px;
+  --margin-10-20       : 10px 20px;
+
+  /*--------------------- Querys ---------------------*/
+  --screen-sm           : 576px; 
+  --screen-md           : 768px; 
+  --screen-lg           : 1024px; 
+  --screen-xl           : 1280px; 
+  --screen-2xl          : 1536px; 
+
   --azulPrincipal: #09203F;
   --azulSecundario: #00427D;
   --azulSecundarioT: #0c3f6917;
   --grisFondo: #F8F8F8;
   --borde: #e9e9e9;
-  --blanco: #fff;
   --blancoT: #ffffff2a;
   --grisAzul: #537895;
   --texto: #334155;
@@ -30,13 +108,11 @@
   --textoAlternativo: #7d7d7d;
   --textoAzul: #4C6578;
   --enlaces: #8FA0B0;
-  --oscuro: #1B2A36;
-  --degradado1: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
-  --degradado2: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
   --sombra:  0px 0px 26px 0px rgba(0,0,0,0.2);
   --separacion: 50px;
 }
 
+/*------------------ Resetear box model ------------------*/
 *, ::after, ::before{
   margin: 0;
   padding: 0;
@@ -44,28 +120,19 @@
 }
 
 body{
-  font-family: 'Roboto', sans-serif;
-  color: var(--texto);
+  font-family: var(--fuentePrincipal);
+  color: var(--texto-principal);
+  font-size: var(--parrafo-sm);
 }
 
-.contenedor{
-  width: 90%;
-  margin: 0 auto;
-}
-
+/*----------------------- Contendor -----------------------*/
 .margen{
-  width: 80%;
-  max-width: 1400px;
+  width: 1400px;
+  max-width: 90%;
   margin: 0 auto;
-  padding: var(--separacion) 0;
 }
 
-@media (max-width: 1280px) {
-  .margen{
-      width: 90%;
-  }
-}
-
+/*----------------------- Generales -----------------------*/
 a{
   text-decoration: none;
 }

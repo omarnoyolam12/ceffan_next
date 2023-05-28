@@ -1,0 +1,56 @@
+@import '../base/mixins';
+
+// *Contenedor de la sección------------------------------------------
+.seccion{
+    min-height: 400px;
+    @include separacion;
+    @include grid(2, 3rem);
+
+    @include tablet {
+        @include grid(1, 3rem);
+    }
+}
+
+// *Imagen------------------------------------------------------------
+.imagen{
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    @include tablet {
+        grid-row: 2/3;
+        height: 40rem;
+    }
+
+    @include telefono {
+        height: 25rem;
+    }
+
+    img {
+        @include imagen(true, 2rem);
+    }
+}
+
+// *Nosotros----------------------------------------------------------
+.nosotros {
+    @include caja(100%, 100%, 0, 3rem 0);
+
+    @include tablet {
+        grid-row: 1/2;
+        padding: 0;
+    }
+
+    .frase {
+        @include frase2($texto-secundario);
+        margin-bottom: 2rem;
+        width: 80%;
+    }
+
+    .info {
+        
+        p {
+            line-height: $line-height-2;
+            margin-bottom: 2rem;
+        }
+    }
+}

@@ -6,7 +6,6 @@ export {default as ListaSoluciones} from "./ListaSoluciones";
 export {default as Cursos} from "./Cursos";
 export {default as GridCursos} from "./GridCursos";
 export {default as CardFechas} from "./CardFechas";
-export {default as Frase} from "./Frase";
 export {default as PostRecientes} from "./PostRecientes";
 export {default as EntradaPost} from "./EntradaPost";
 export {default as Testimonios} from "./Testimonios";

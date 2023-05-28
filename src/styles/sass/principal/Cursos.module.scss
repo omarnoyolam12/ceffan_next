@@ -1,0 +1,119 @@
+@import '../base/mixins';
+
+// *Seccion-------------------------------------------------
+.seccion {
+    @include separacion;
+}
+
+// *Titulo y botón de ver más--------------------------------
+.encabezado {
+    @include flex(space-between, center, 2rem, row);
+    margin-bottom: 4rem;
+
+    .texto {
+        flex: 1 1 0%;
+
+        .titulo {
+            @include frase;
+        }
+    }
+
+    a {
+        @include botonMas;
+    }
+}
+
+// *Contendor de la grid de fecha y cursos---------------------
+.info {
+    @include grid(3, 2rem);
+
+    @include escritorio {
+        @include grid(1, 2rem);
+    }
+}
+
+// *Contenedor de las fechas------------------------------------
+.fechas {
+    grid-column: 1/2;;
+
+    .card {
+        margin-bottom: 2rem;
+        @include flex(flex-start, center, 0, row);
+
+        .dia {
+            @include caja(8rem, 8rem, 0, 2rem);
+            @include flex(center, center, 0, row);
+            text-align: center;
+            background: $bg-secundario;
+            color: $texto-blanco;
+            font-weight: 700;
+        }
+
+        .info {
+            @include flex(space-between, flex-start, 0, column);
+            min-height: 8rem;
+            flex: 1 1 0;
+            padding: 1rem;
+
+            .curso {
+                font-weight: 700;
+            }
+
+            .iconos {
+                @include flex(flex-start, center, 2rem, row);
+
+                .dato {
+                    @include flex(flex-start, center, 0, row);
+
+                    i {
+                        font-size: $icono3;
+                        
+                    }
+                }
+            }
+        }
+    }
+}
+
+// *Grid de las categorias de los cursos------------------------
+.grid {
+    grid-column: 2/4;
+    @include grid(2, 2rem);
+
+    @include escritorio {
+        grid-column: 1/2
+    }
+
+    @include tablet {
+        @include grid(1, 2rem);
+    }
+
+    .tarjeta {
+        @include flex(flex-start, center, 2rem, row);
+        border: 1px solid $gris70;
+        background: $blanco;
+        border-radius: 1rem;
+        padding: 2rem;
+        transition: all .3s ease-in-out;
+        background-blend-mode: screen;
+
+        @include escritorioXl {
+            @include flex(center, center, 2rem, column);
+        }        
+
+        &:hover {
+            background: $degradado3;
+        }
+        
+        figure {
+            @include imagenSize(15rem, 15rem);
+        }
+
+        .categoria {
+            font-size: $heading-xs;
+            font-weight: 700;
+            text-align: center;
+        }
+    }
+}
+

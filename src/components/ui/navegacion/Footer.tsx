@@ -2,14 +2,14 @@ import Image from "next/image";
 import Link from "next/link";
 
 import logo from "../../../../public/img/logo.svg";
-import style from "../../../styles/principal/Footer.module.css";
+import sass from "../../../styles/sass/navegacion/Footer.module.scss";
 
 const Footer = () => {
     return (
-        <footer className={style.footer}>
+        <footer className={sass.footer}>
             <div className="contenedor">
-                <div className={style.fila}>
-                    <figure className={style.logo}>
+                <div className={sass.fila}>
+                    <figure className={sass.logo}>
                         <Image 
                             src={logo}
                             alt="Logo Ceffan"
@@ -18,8 +18,8 @@ const Footer = () => {
                         />
                     </figure>
 
-                    <div className={style.contacto}>
-                        <ul className={style.redes}>
+                    <div className={sass.contacto}>
+                        <ul className={sass.redes}>
                             <li>
                                 <a href="" target="_blank">
                                     <i className='bx bxl-facebook'></i>
@@ -37,7 +37,7 @@ const Footer = () => {
                             </li>
                         </ul>
 
-                        <div className={style.numeros}>
+                        <div className={sass.numeros}>
                             <i className='bx bx-phone' ></i>
                             <p>
                                 5589511281-5589511395-5592252886
@@ -46,7 +46,7 @@ const Footer = () => {
                     </div>
                 </div>
 
-                <div className={style.copyright}>
+                <div className={sass.copyright}>
                     <p>
                         Todos los derechos reservados 2023
                     </p>

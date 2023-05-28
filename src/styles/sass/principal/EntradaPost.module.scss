@@ -1,0 +1,85 @@
+@import '../base/mixins';
+
+.entrada {
+
+    @include tablet {
+        margin-bottom: 2rem;
+    }
+
+    .imagen {
+        @include imagenSize(100%, 25rem, false);
+
+        img {
+            @include imagen(true, .5rem);
+        }
+
+        .overlay {
+            @include absoluta(arriba, izquierda, 0, 0);
+            @include flex(center, center, 0, row);
+            width: 100%;
+            height: 100%;
+            background: #000000a2;
+            opacity: 0;
+            transition: all .3s ease-in-out;
+            border-radius: .5rem;
+
+            &:hover {
+                opacity: 1;
+            }
+
+            p{
+                font-size: $parrafo-xl;
+                color: $texto-blanco;
+            }
+        }
+    }
+
+    .info {
+
+        margin-top: 2rem;
+        @include flex(flex-start, flex-start, 1rem, column);
+
+        .tags {
+            color: $texto-secundario;
+            font-size: $parrafo-xs;
+            font-weight: 700;
+        }
+
+        .titulo {
+            font-size: $heading-sm;
+            font-weight: 700;
+            color: $texto-gris100;
+            transition: all .3s ease-in-out;
+
+            &:hover {
+                color: $acero90;
+            }
+        }
+
+        .descripcion {
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 4;
+            overflow: hidden;
+            font-weight: 300;
+            line-height: $line-height-2;
+            color: $texto-acero90;
+        }
+
+        .metadatos {
+            @include flex(flex-start, center, 1rem, row);
+
+            p {
+                font-size: $parrafo-xs;
+                color: $texto-gris80;
+                font-weight: 300;
+                padding-right: 1rem;
+                border-right: 1px solid lighten($acero100, 40);
+
+                &:last-of-type {
+                    border-right: none;
+                }
+            }
+        }
+    }
+}

@@ -2,18 +2,19 @@ import Link from "next/link";
 import Image from "next/image";
 import { CirculosFondo } from "./"
 import style from "../../../styles/principal/Hero.module.css";
+import sass from "../../../styles/sass/principal/Hero.module.scss";
 import header from "../../../../public/img/header.jpg";
 
 const Hero = () => {
     return (
-        <header className={style.header}>
-            <div className={style.relative}>
-                <div className={`margen ${style.texto}`}>
-                    <p className={style.aprender}>Aprender</p>
-                    <h1 className={style.titulo}>Administación, Contabilidad o Finanzas</h1>
-                    <p className={style.frase}>Es un Bien Necesario, para poder crecer de manera personal y en tu negocio.</p>
+        <header className={sass.header}>
+            <div className={sass.relative}>
+                <div className={`contenedor ${sass.texto}`}>
+                    <p className={sass.aprender}>Aprender</p>
+                    <h1 className={sass.titulo}>Administación, Contabilidad o Finanzas</h1>
+                    <p className={sass.frase}>Es un Bien Necesario, para poder crecer de manera personal y en tu negocio.</p>
 
-                    <Link className={style.link} href='/'>
+                    <Link className={sass.link} href='/'>
                         <p>Comenzar</p>
                         <i className='bx bx-arrow-back'></i>
                     </Link>         
@@ -59,7 +60,7 @@ const Hero = () => {
             </div>
 
 
-            <div className={style.imagen}>
+            <div className={sass.imagen}>
                 <figure>
                     <Image
                         src={header}
