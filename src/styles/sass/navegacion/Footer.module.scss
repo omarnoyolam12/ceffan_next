@@ -3,7 +3,7 @@
 // *Footer------------------------------------------------------
 .footer {
     @include caja(100%, auto, 8rem 0 0 0, 2rem 0);
-    background: $bg-principal;
+    background: $bg-principal-900;
     color: $texto-blanco;
 
     .fila {

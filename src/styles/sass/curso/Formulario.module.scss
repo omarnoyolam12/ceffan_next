@@ -1,0 +1,84 @@
+@import '../base/mixins';
+
+// *Seccion--------------------------------------------------
+.seccion {
+    @include caja(100%, auto, 0, 4rem);
+    border: 1px solid $slate-200;
+    border-radius: 1rem;
+
+    @include telefono {
+        padding: 2rem;
+    }
+}
+
+// *Formulario------------------------------------------------
+.formulario {
+    margin-top: 4rem;
+    @include grid(2, 2rem);
+
+    @include telefono{
+        @include grid(1, 2rem);
+    }
+
+    input, select, textarea {
+        padding: 1rem 2rem;
+        background: $bg-slate-100;
+        color: $texto-slate-700;
+        border: none;
+        outline: none;
+        border-radius: .5rem;
+
+        &:focus {
+            outline: 1px solid $texto-principal-600;
+        }
+    }
+
+    option {
+        color: $texto-slate-700;
+    }
+
+    .mensaje {
+
+        grid-column: 1/3;
+
+        @include telefono {
+            grid-column: 1/2;
+        }
+
+        label {
+            font-size: $heading-xs;
+            color: $texto-principal-700;
+            display: block;
+            margin-bottom: 2rem;
+        }
+
+        textarea {
+            padding: 3rem 2rem;
+            min-width: 100%;
+            max-width: 100%;
+            min-height: 25rem;
+            max-height: 35rem;
+        }
+    }
+
+    .submit {
+        grid-column: 1/3;
+        @include flex(flex-end, center, 0, row);
+
+
+        @include telefono {
+            grid-column: 1/2;
+        }
+        
+        input {
+            background: $bg-principal-700;
+            color: $texto-blanco;
+            cursor: pointer;
+            transition: all .3s ease-in;
+
+            &:hover {
+                background: $bg-principal-800;
+            }
+        }
+    }
+}

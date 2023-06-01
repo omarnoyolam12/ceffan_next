@@ -1,10 +1,10 @@
-import style from "../../../styles/cursos/Header.module.css";
+import sass from "../../../styles/sass/cursos/Header.module.scss";
 
 const Header = () => {
     return (
         <>
-            <header className={style.header}>
-                <div className={`margen ${style.textos}`}>
+            <header className="contenedor">
+                <div className={`${sass.header}`}>
                     <h1>    
                         Desarrolla Tu <span>Potencial</span> Con Nuestros <span>Cursos</span>.
                     </h1>
@@ -12,10 +12,8 @@ const Header = () => {
                         Sabemos que el mundo de las finanzas puede ser complejo y desafiante, pero estamos aquí para simplificarlo y ayudarte a tomar decisiones informadas y estratégicas.
                     </p>
                 </div>
-            </header>
 
-            <nav className={style.barra}>
-                <div className={style.navegacion}>
+                <nav className={sass.navegacion}>
                     <ul>
                         <li>Todos</li>
                         <li>Contabilidad</li>
@@ -24,7 +22,7 @@ const Header = () => {
                         <li>Recursos Humanos</li>
                     </ul>
 
-                    <select className={style.seleccionar} name="categoria" id="categoria">
+                    <select className={sass.seleccionar} name="categoria" id="categoria">
                         <option value="">-- Seleccionar Categoría --</option>
                         <option value="">Todos</option>
                         <option value="Contabilidad">Contabilidad</option>
@@ -33,12 +31,12 @@ const Header = () => {
                         <option value="Recursos Humanos">Recursos Humanos</option>
                     </select>
 
-                    <div className={style.botones}>
+                    <div className={sass.botones}>
                         <i className='bx bx-search'></i>
                         <i className='bx bxs-grid'></i>
                     </div>
-                </div>
-            </nav>
+                </nav>
+            </header>
         </>
     )
 }

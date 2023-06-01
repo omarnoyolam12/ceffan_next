@@ -44,7 +44,7 @@
             @include caja(8rem, 8rem, 0, 2rem);
             @include flex(center, center, 0, row);
             text-align: center;
-            background: $bg-secundario;
+            background: $bg-principal-700;
             color: $texto-blanco;
             font-weight: 700;
         }
@@ -90,7 +90,7 @@
 
     .tarjeta {
         @include flex(flex-start, center, 2rem, row);
-        border: 1px solid $gris70;
+        border: 1px solid $slate-300;
         background: $blanco;
         border-radius: 1rem;
         padding: 2rem;
@@ -102,7 +102,7 @@
         }        
 
         &:hover {
-            background: $degradado3;
+            background: $bg-degradado3;
         }
         
         figure {

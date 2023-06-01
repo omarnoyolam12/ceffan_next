@@ -4,7 +4,7 @@
 .fondo {
     @include seccion(8rem 0, 6rem 0);
 
-    background: $bg-gris60;
+    background: $bg-slate-100;
 
     .grid {
         @include grid(2, 10rem);
@@ -31,7 +31,7 @@
 
 // *Titulo--------------------------------------------------------------
 .frase {
-    @include frase2($texto-secundario);
+    @include frase2($texto-principal-700);
 }
 
 // *Carrusel------------------------------------------------------------
@@ -57,13 +57,14 @@
         }
 
         .puesto {
-            color: $texto-gris80;
+            color: $texto-slate-600;
         }
     }
 
     .texto{
         min-height: 150px;
         line-height: $line-height-2;
+        color: $texto-slate-800;
     }
 }
 
@@ -82,7 +83,7 @@
 
         i {
             font-size: $icono5;
-            color: $texto-acero100;
+            color: $texto-slate-600;
         }
     }
 }

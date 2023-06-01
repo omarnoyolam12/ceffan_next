@@ -11,23 +11,43 @@ $escritorio-xl  : 1280px;
 $escritorio-2xl : 1536px;
 $horizontal     : 650px;
 
-// *Colores--------------------------------------------------------
+// *Paleta de colores------------------------------------------------
 $principal     : #09203F;
-$secundario    : #00427D;
+$negro         : #000;
 $blanco        : #fff;
-$gris100       : #334155;
-$gris90        : #454D54;
-$gris80        : #7d7d7d;
-$gris70        : #8FA0B0;
-$gris60        : #f2f2f2;
-$acero100      : #537895;
-$acero90       : #4C6578;
-$negroT        : #000000b2;
-$azulT         : #0c3f6917;
+$slate         : #334155;
+
+// *Degradados------------------------------------------------------
 $degradado1    : linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
 $degradado2    : linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
 $degradado3    : linear-gradient(-180deg, #BCC5CE 0%, #929EAD 98%), radial-gradient(at top left, rgba(255,255,255,0.30) 0%, rgba(0,0,0,0.30) 100%);
-$sombra        : 0px 0px 26px 0px rgba(0,0,0,0.2);
+
+// *Sombras---------------------------------------------------------
+$sombra1        : 0px 0px 26px 0px rgba(0,0,0,0.2);
+$sombra2        : 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+
+// *Variaciones de colores principales------------------------------
+$principal-50       : lighten($principal, 75);  
+$principal-100      : lighten($principal, 70);  
+$principal-200      : lighten($principal, 60);  
+$principal-300      : lighten($principal, 50);  
+$principal-400      : lighten($principal, 40);  
+$principal-500      : lighten($principal, 30);  
+$principal-600      : lighten($principal, 20);  
+$principal-700      : lighten($principal, 18);  
+$principal-800      : lighten($principal, 8);  
+$principal-900      : lighten($principal, 0);  
+
+$slate-50           : lighten($slate, 75);  
+$slate-100          : lighten($slate, 70);  
+$slate-200          : lighten($slate, 60);  
+$slate-300          : lighten($slate, 50);  
+$slate-400          : lighten($slate, 40);  
+$slate-500          : lighten($slate, 30);  
+$slate-600          : lighten($slate, 20);  
+$slate-700          : lighten($slate, 18);  
+$slate-800          : lighten($slate, 8);  
+$slate-900          : lighten($slate, 0);
 
 // *Espacio entre parrafos-----------------------------------------
 $line-height-1    : 1.4;
@@ -55,32 +75,60 @@ $icono3        : 2.4rem;
 $icono4        : 3.2rem;
 $icono5        : 4.2rem;
 
-// *Colores de fondo-----------------------------------------------
-$bg-principal      : $principal;
-$bg-secundario     : $secundario;
-$bg-blanco         : $blanco;
-$bg-gris100        : $gris100;
-$bg-gris90         : $gris90;
-$bg-gris80         : $gris80;
-$bg-gris70         : $gris70;
-$bg-gris60         : $gris60;
-$bg-acero100       : $acero100;
-$bg-acero90        : $acero90;
-$bg-negro-t        : $negroT;
-$bg-azul-t         : $azulT;
-$bg-degradado1     : $degradado1;
-$bg-degradado2     : $degradado2;
+// *Color de fondos------------------------------------------------
+$bg-principal-50        : $principal-50;
+$bg-principal-100       : $principal-100;
+$bg-principal-200       : $principal-200;
+$bg-principal-300       : $principal-300;
+$bg-principal-400       : $principal-400;
+$bg-principal-500       : $principal-500;
+$bg-principal-600       : $principal-600;
+$bg-principal-700       : $principal-700;
+$bg-principal-800       : $principal-800;
+$bg-principal-900       : $principal-900;
+
+$bg-slate-50            : $slate-50;
+$bg-slate-100           : $slate-100;
+$bg-slate-200           : $slate-200;
+$bg-slate-300           : $slate-300;
+$bg-slate-400           : $slate-400;
+$bg-slate-500           : $slate-500;
+$bg-slate-600           : $slate-600;
+$bg-slate-700           : $slate-700;
+$bg-slate-800           : $slate-800;
+$bg-slate-900           : $slate-900;
+
+$bg-blanco              : $blanco;
+$bg-negro               : $negro;
+$bg-degradado1          : $degradado1;
+$bg-degradado2          : $degradado2;
+$bg-degradado3          : $degradado3;
 
 // *Colores de texto-----------------------------------------------
-$texto-principal      : $principal;
-$texto-secundario     : $secundario;
-$texto-blanco         : $blanco;
-$texto-gris100        : $gris100;
-$texto-gris90         : $gris90;
-$texto-gris80         : $gris80;
-$texto-gris70         : $gris70;
-$texto-gris60         : $gris60;
-$texto-acero100       : $acero100;
-$texto-acero90        : $acero90;
-$texto-degradado1     : $degradado1;
-$texto-degradado2     : $degradado2;
+$texto-principal-50        : $principal-50;
+$texto-principal-100       : $principal-100;
+$texto-principal-200       : $principal-200;
+$texto-principal-300       : $principal-300;
+$texto-principal-400       : $principal-400;
+$texto-principal-500       : $principal-500;
+$texto-principal-600       : $principal-600;
+$texto-principal-700       : $principal-700;
+$texto-principal-800       : $principal-800;
+$texto-principal-900       : $principal-900;
+
+$texto-slate-50            : $slate-50;
+$texto-slate-100           : $slate-100;
+$texto-slate-200           : $slate-200;
+$texto-slate-300           : $slate-300;
+$texto-slate-400           : $slate-400;
+$texto-slate-500           : $slate-500;
+$texto-slate-600           : $slate-600;
+$texto-slate-700           : $slate-700;
+$texto-slate-800           : $slate-800;
+$texto-slate-900           : $slate-900;
+
+$texto-blanco              : $blanco;
+$texto-negro               : $negro;
+$texto-degradado1          : $degradado1;
+$texto-degradado2          : $degradado2;
+$texto-degradado3          : $degradado3;

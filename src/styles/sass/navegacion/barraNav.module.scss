@@ -2,7 +2,7 @@
 
 // *Barra de navegación----------------------------------------------
 .barra {
-    background: $bg-principal;
+    background: $bg-principal-900;
 }
 
 .contenedor {
@@ -33,7 +33,7 @@
         z-index: 100;
         background: $bg-blanco;
         flex-direction: column;
-        box-shadow: $sombra;
+        box-shadow: $sombra1;
 
         &.esconder {
             transform: translateX(-320px);
@@ -42,13 +42,17 @@
 
     li{
         a{
-            color: $texto-gris70;
+            color: $texto-slate-600;
+
+            @include escritorio {
+                font-size: $parrafo-xl;
+            }
 
             &.activa {
                 color: $texto-blanco;
 
                 @include escritorio {
-                    color: $texto-gris100;
+                    color: $texto-slate-900;
                 }
             }
         }
@@ -80,7 +84,7 @@
         left: 0;
         z-index: 99;
         opacity: 0;
-        background: $negroT;
+        background: rgba($bg-negro, .6);
 
         &.ver {
             display: block;

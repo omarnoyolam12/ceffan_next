@@ -1,0 +1,42 @@
+@import '../base/mixins';
+
+// *Grid de la seccion------------------------------------------------
+.seccion {
+    @include separacion;
+    @include grid(4, 4rem);
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: 
+    'descripcion descripcion descripcion fechas'
+    'formulario formulario formulario fechas'
+    ;
+
+    @include escritorioXl {
+        @include grid(3, 4rem);
+        grid-template-areas: 
+        'descripcion descripcion fechas'
+        'formulario formulario fechas'
+        ;
+    }
+
+    @include escritorio {
+        @include grid(1, 4rem);
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas: 
+        'descripcion'
+        'fechas'
+        'formulario'
+        ;
+    }
+
+    .descripcion {
+        grid-area: descripcion;
+    }
+
+    .formulario {
+        grid-area: formulario;
+    }
+
+    .fechas {
+        grid-area: fechas;
+    }
+}

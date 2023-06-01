@@ -64,12 +64,16 @@
     gap: $espaciado;
 }
 
-@mixin flex($justify, $items, $gap, $direction) {
+@mixin flex($justify, $items, $gap, $direction, $wrap: false) {
     display: flex;
     justify-content: $justify;
     align-items: $items;
     gap: $gap;
     flex-direction: $direction;
+
+    @if($wrap == true) {
+        flex-wrap: wrap;
+    }
 }
 
 // *Imagenes------------------------------------------------------
@@ -84,7 +88,7 @@
     }
 }
 
-@mixin imagenSize($width, $height, $object: false) {
+@mixin imagenSize($width, $height, $object: false, $radius: false, $borderRadius: 0) {
     position: relative;
     width: $width;
     height: $height;
@@ -96,6 +100,10 @@
         @if($object == true) {
             object-fit: cover;
             object-position: center;
+        }
+
+        @if($radius == true) {
+            border-radius: $borderRadius;
         }
     }
 }
@@ -124,10 +132,10 @@
 // *Titulos-------------------------------------------------------
 @mixin frase {
     font-size: $heading-md;
-    color: $gris70;
+    color: $texto-slate-600;
 
     span {
-        color: $texto-secundario;
+        color: $texto-principal-700;
     }
 
     @include escritorio {
@@ -150,7 +158,24 @@
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    background-image: $degradado1;
+    background-image: $bg-degradado1;
     border-radius: 1rem;
-    color: $texto-gris100;
+    color: $texto-slate-700;
+}
+
+// *Inputs---------------------------------------------------------
+@mixin inputField($background, $texto, $padding) {
+    outline: none;
+    border: none;
+    background: $background;
+    color: $texto;
+    padding: $padding;
+}
+
+// *Descripcion de cartas------------------------------------------
+@mixin ocultarLineas($lineas) {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $lineas;
+    overflow: hidden;
 }

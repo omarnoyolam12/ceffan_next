@@ -1,0 +1,42 @@
+@import '../base/mixins';
+
+// *Header de la página--------------------------------------
+.header {
+    margin: 4rem auto;
+
+    h1 {
+        @include frase;
+    }
+
+    p {
+        color: $texto-slate-700;
+    }
+}
+
+// *Barra de cursos-------------------------------------------
+.navegacion {
+    @include flex(space-between, center, 2rem, row);
+    padding: 2rem 0;
+
+    ul {
+        @include flex(flex-start, center, 2rem, row);
+
+        @include tablet {
+            display: none;
+        }
+    }
+
+    .seleccionar {
+        display: none;
+        @include inputField($slate-100, $slate-600, 1rem 2rem);
+
+        @include tablet {
+            display: block;
+        }
+    }
+
+    i{
+        font-size: $icono3;
+        margin-left: 1rem;
+    }
+}

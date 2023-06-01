@@ -20,13 +20,13 @@
     .encabezado{
         font-size: $heading-md;
         margin-bottom: 2rem;    
-        @include frase2($texto-secundario);
+        @include frase2($texto-principal-700);
     }
 
     .frase{
         font-weight: 300;
         line-height: $line-height-3;
-        color: $texto-gris80;
+        color: $texto-slate-500;
     }
 }
 
@@ -34,7 +34,7 @@
 .soluciones {
     grid-column: 2/4;
     @include grid(2, 0);
-    box-shadow: $sombra;
+    box-shadow: $sombra1;
 
     @include escritorioXl {
         grid-column: 1/2;
@@ -47,8 +47,8 @@
     .tarjeta {
         @include flex(center, flex-start, 1rem, row);
         padding: 4rem 6rem;
-        border-top: 1px solid lighten($acero100, 40);
-        border-right: 1px solid lighten($acero100, 40);
+        border-top: 1px solid $slate-200;
+        border-right: 1px solid $slate-200;
 
         @include tablet {
             @include flex(center, center, 1rem, column);
@@ -58,12 +58,12 @@
             @include caja(5rem, 5rem, 0, 0);
             @include flex(center, center, 0, row);
             border-radius: 50%;
-            border: 1px solid lighten($acero100, 40);
-            background: lighten($acero100, 50);
+            border: 1px solid $slate-200;
+            background: $bg-slate-100;
 
             i{
                 font-size: $icono3;
-                color: $texto-secundario;
+                color: $texto-principal-700;
 
             }
         }
@@ -83,7 +83,7 @@
             .info {
                 font-weight: 300;
                 line-height: $line-height-1;
-                color: $texto-gris80;
+                color: $texto-slate-500;
 
                 @include tablet {
                     text-align: center;

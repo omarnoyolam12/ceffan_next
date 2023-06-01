@@ -1,21 +1,19 @@
 import { Card } from "./";
-import style from "../../../styles/cursos/ListaCursos.module.css";
+import sass from "../../../styles/sass/cursos/Grid.module.scss";
 
 const ListaCursos = () => {
     return (
-        <section className={style.seccion}>
-            <div className={style.grid}>
-                <Card/>
-                <Card/>
-                <Card/>
-                <Card/>
-                <Card/>
-                <Card/>
-                <Card/>
-                <Card/>
-                <Card/>
-                <Card/>
-            </div>
+        <section className={`contenedor ${sass.layout}`}>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
         </section>
     )
 }

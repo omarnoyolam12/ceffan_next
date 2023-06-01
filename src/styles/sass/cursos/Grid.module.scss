@@ -1,0 +1,18 @@
+@import '../base/mixins';
+
+// *Layout de los cursos------------------------------------
+.layout {
+    @include grid(4, 2rem);
+
+    @include escritorio {
+        @include grid(3, 2rem);
+    }
+
+    @include tablet {
+        @include grid(2, 2rem);
+    }
+
+    @include telefono {
+        @include grid(1, 2rem);
+    }
+}

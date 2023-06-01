@@ -1,0 +1,28 @@
+@import '../base/mixins';
+
+// *Titulo------------------------------------------------------
+.titulo {
+    font-size: $heading-md;
+}
+
+// *Tarjeta-----------------------------------------------------
+.tarjeta {
+    @include caja(100%, auto, 2rem 0, 4rem 2rem);
+    border: 1px solid $slate-200;
+    border-radius: 1rem;
+
+    .datos {
+        @include flex(space-between, flex-start, 1rem, row);
+        padding: 1rem 0;
+        border-bottom: 1px solid $slate-200;
+
+        .dato {
+            @include flex(flex-start, center, 1rem, row);
+        }
+
+        .info {
+            color: $texto-slate-500;
+            text-align: right;
+        }
+    }
+}

@@ -1,60 +1,52 @@
-import style from "../../../styles/curso/Formulario.module.css";
+import sass from "../../../styles/sass/curso/Formulario.module.scss";
 
 const Formulario = () => {
     return (
-        <form 
-            className={style.formulario}
-        >
-            <div className={style.grid}>
-                <input
-                    id="nombre"
-                    name='nombre' 
-                    type="text" 
-                    placeholder='Nombre'
-                />
-                
-                <input
-                    id="curso"
-                    name='curso' 
-                    type="text" 
-                    placeholder='Curso de Interes'
-                />
-                
-                <input
-                    id="modalidad"
-                    name='modalidad' 
-                    type="text" 
-                    placeholder='Modalidad'
-                />
-                
-                <input
-                    id="email"
-                    name='email' 
-                    type="email" 
-                    placeholder='Email'
-                />
-                
-                <input
-                    id="numero"
-                    name='numero' 
-                    type="number" 
-                    placeholder='Teléfono'
-                />
+        <div className={sass.seccion}>
+            <h2>Deseo inscribirme</h2>
 
-                <div className={style.textarea}>
-                    <label htmlFor="mensaje">Opcional</label>
-                    <textarea name="mensaje" id="mensaje" placeholder='Mensaje' wrap="hard"></textarea>
-                </div>
-            </div>
-
-            <div className={style.submit}>
+            <form 
+                action=""
+                className={sass.formulario}
+            >
                 <input 
-                    type="submit" 
-                    value="Enviar"
-                    disabled 
+                    type="text"
+                    placeholder="Nombre"
                 />
-            </div>
-        </form>
+                
+                <input 
+                    type="email"
+                    placeholder="Email"
+                />
+
+                <input 
+                    type="number" 
+                    placeholder="Teléfono" 
+                />
+
+                <select 
+                    name="" 
+                    id=""
+                >
+                    <option value="">-- Seleccionar Modalidad --</option>
+                    <option value="1">Presencial</option>
+                    <option value="2">E-learning</option>
+                    <option value="3">Zoom</option>
+                </select>
+
+                <div className={sass.mensaje}>
+                    <label htmlFor="mensaje">Opcional</label>
+                    <textarea
+                        id="mensaje"
+                        placeholder="Escribe tu mensaje (Opcional)" 
+                    ></textarea>
+                </div>
+
+                <div className={sass.submit}>
+                    <input type="submit" value="Enviar" />
+                </div>
+            </form>
+        </div>
     )
 }
 

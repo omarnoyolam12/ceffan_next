@@ -3,7 +3,7 @@
 // *Base de la sección---------------------------------------------------
 .header {
     @include seccion(0 0 10rem 0, 0, 100%, calc(100vh - 25rem), relative);
-    background: $bg-principal;
+    background: $bg-principal-900;
 
     @include tablet {
         margin-bottom: 0;
