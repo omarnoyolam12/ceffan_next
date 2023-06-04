@@ -1,0 +1,23 @@
+@import "../base/mixins";
+
+// *Entrada-----------------------------------------------
+.entrada {
+    padding: 2rem 0;
+    @include flex(flex-start, flex-start, 1rem, row);
+    border-bottom: 1px solid $slate-200;
+
+    &:last-of-type {
+        border-bottom: none;
+    }
+
+    figure {
+        @include imagenSize(8rem, 8rem, true);
+    }
+
+    .datos {
+        .titulo {
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+    }
+}

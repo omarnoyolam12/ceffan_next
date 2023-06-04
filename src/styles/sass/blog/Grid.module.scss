@@ -1,0 +1,51 @@
+@import '../base/mixins';
+
+.layout {
+    @include separacion;
+    @include grid(3, 4rem);
+
+    @include tablet {
+        @include grid(1, 4rem);
+    }
+
+    .entradas {
+        grid-column: 1/3;
+
+        @include tablet {
+            grid-column: 1/2;
+        }
+
+        .paginacion {
+            @include flex(flex-start, center, 1rem, row);
+            
+            a {
+                width: 4rem;
+                height: 4rem;
+                @include flex(center, center, 0, row);
+                background: $bg-blanco;
+                border: 1px solid $principal-700;
+                color: $texto-principal-700;
+                transition: all .3s ease-in;
+                
+                &.activo {
+                    background: $bg-principal-800;
+                    color: $texto-blanco;
+                }
+
+                &:hover {
+                    background: $bg-principal-800;
+                    color: $texto-blanco;
+                }
+            }
+        }
+    }
+
+    .acerca {
+        grid-column: 3/4;
+        @include flex(flex-start, flex-start, 2rem, column);
+
+        @include tablet {
+            grid-column: 1/2;
+        }
+    }
+}

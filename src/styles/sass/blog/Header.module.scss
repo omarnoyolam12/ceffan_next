@@ -1,0 +1,28 @@
+@import '../base/mixins';
+
+// *Header--------------------------------------------------
+.header {
+    padding: 8rem 0;
+    background: $bg-slate-100;
+    @include flex(center, center, 1rem, column);
+
+    .pagina {
+        font-size: $heading-xs;
+        color: $texto-blanco;
+        padding: 1rem 2rem;
+        border-radius: 3rem;
+        display: inline-block;
+        background: $bg-principal-800;
+        text-align: center;
+    }
+
+    .titulo {
+        text-align: center;
+        font-weight: 400;
+        font-size: $heading-md;
+
+        @include telefono {
+            font-size: $heading-sm;
+        }
+    }
+}

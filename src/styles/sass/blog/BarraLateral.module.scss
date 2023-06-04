@@ -1,0 +1,77 @@
+@import '../base/mixins';
+
+// *Busqueda--------------------------------------------------------
+.busqueda {
+    width: 100%;
+    @include flex(flex-start, center, 0, row);
+
+    input {
+        flex: 1 1 0%;
+        height: 4rem;
+        outline: none;
+        @include inputField($bg-slate-100, $texto-slate-500, 0 2rem)
+    }
+
+    button {
+        width: 4rem;
+        height: 4rem;
+        background: $bg-principal-700;
+        color: $texto-blanco;
+        border: none;
+    }
+}
+
+// *Post recientes--------------------------------------------------
+.post {
+    width: 100%;
+
+    .seccion {
+        font-size: $heading-sm;
+        font-weight: 700;
+        margin-bottom: 1rem;
+    }
+}
+
+// *Categorias------------------------------------------------------
+.categorias {
+    width: 100%;
+
+    .seccion {
+        font-size: $heading-sm;
+        font-weight: 700;
+        margin-bottom: 3rem;
+    }
+
+    .listado {
+        @include flex(space-between, center, 1rem, row);
+        margin-bottom: 2rem;
+    }
+}
+
+// *Tags------------------------------------------------------------
+.tags {
+    width: 100%;
+
+    .seccion {
+        font-size: $heading-sm;
+        font-weight: 700;
+        margin-bottom: 3rem;
+    }
+
+    .listado {
+        @include flex(flex-start, center, 1rem, row, true);
+
+        p {
+            font-size: $parrafo-xs;
+            padding: 1rem 2rem;
+            border-radius: 2rem;
+            outline: 1px solid $slate-700;
+            transition: all .3s ease-in;
+
+            &:hover {
+                background: $bg-slate-700;
+                color: $texto-blanco;
+            }
+        }
+    }
+}

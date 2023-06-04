@@ -1,0 +1,85 @@
+@import '../base/mixins';
+
+// *Entrada----------------------------------------------
+.entrada {
+    @include flex(flex-start, flex-start, 2rem, column);
+    margin-bottom: 6rem;
+
+    figure {
+        @include imagenSize(100%, 45rem, true);
+
+        @include telefono {
+            height: 25rem;
+        }
+    }
+
+    .metadatos {
+        @include flex(flex-start, center, 1rem, row);
+
+        p {
+            color: $texto-slate-400;
+
+            &:first-child {
+                border-right: 1px solid $slate-400;
+                padding-right: 1rem;
+            }
+        }
+    }
+
+    h3 {
+        font-size: $heading-sm;
+        transition: all .3s ease-in;
+
+        &:hover {
+            color: $texto-principal-700
+        }
+    }
+
+    .descripcion {
+        line-height: $line-height-1;
+        color: $texto-slate-700;
+        @include ocultarLineas(4);
+    }
+
+    .enlaces {
+        width: 100%;
+        @include flex(space-between, center, 2rem, row);
+
+        @include telefono {
+            @include flex(flex-start, flex-start, 2rem, column-reverse);
+        }
+
+        .enlace {
+            display: block;
+            padding: 1rem 3rem;
+            background: $bg-principal-800;
+            color: $texto-blanco;
+            border-radius: 2rem;
+            transition: all .3s ease-in;
+
+            @include telefono {
+                width: 100%;
+                text-align: center;
+            }
+    
+            &:hover {
+                background: $bg-blanco;
+                color: $texto-principal-800;
+                outline: 2px solid $principal-800;
+            }
+        }
+
+        .redes {
+            @include flex(flex-end, center, 2rem, row);
+
+            p {
+                font-weight: 700;
+            }
+
+            i {
+                font-size: $icono3;
+                color: $texto-slate-600;
+            }
+        }
+    }
+}
