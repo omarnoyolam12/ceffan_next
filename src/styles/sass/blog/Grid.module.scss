@@ -4,14 +4,14 @@
     @include separacion;
     @include grid(3, 4rem);
 
-    @include tablet {
+    @include escritorio {
         @include grid(1, 4rem);
     }
 
     .entradas {
         grid-column: 1/3;
 
-        @include tablet {
+        @include escritorio {
             grid-column: 1/2;
         }
 
@@ -44,7 +44,7 @@
         grid-column: 3/4;
         @include flex(flex-start, flex-start, 2rem, column);
 
-        @include tablet {
+        @include escritorio {
             grid-column: 1/2;
         }
     }

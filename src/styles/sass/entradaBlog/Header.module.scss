@@ -1,0 +1,27 @@
+@import '../base/mixins';
+
+// *Header--------------------------------------------------
+.header {
+    padding: 8rem 2rem;
+    background: $bg-slate-100;
+    @include flex(center, center, 1rem, column);
+
+    .titulo {
+        font-size: $heading-xl;
+        text-align: center;
+    }
+
+    .metadatos {
+        @include flex(center, center, 1rem, row, true);
+        color: $texto-slate-500;
+
+        p {
+            padding-right: 1rem;
+            border-right: 1px solid $slate-500;
+
+            &:last-of-type {
+                border-right: 0;
+            }
+        }
+    }
+}
